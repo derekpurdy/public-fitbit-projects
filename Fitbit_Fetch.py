@@ -157,7 +157,7 @@ def Get_New_Access_Token(client_id, client_secret):
         access_token, refresh_token = load_tokens_from_file()
     except FileNotFoundError:
         # refresh_token = input("No token file found. Please enter a valid refresh token : ")
-        access_token, refresh_token = refresh_fitbit_tokens(client_id, client_secret, refresh_token)
+        access_token, refresh_token = refresh_fitbit_tokens(client_id, client_secret)
     return access_token
 
 ACCESS_TOKEN = Get_New_Access_Token(client_id, client_secret)
